@@ -15,3 +15,6 @@ def percentile_based_outlier(data, col):
     df_percentile = data[(data[col]< upper_limit) & (data[col]> lower_limit)]
     return df_percentile 
     
+def drop_all_na(data, cols):
+    df = data[cols].dropna()
+    return df
